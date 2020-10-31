@@ -5,10 +5,12 @@
 [Actors and Actions](#actors)
 
 <a name="adrs"/>
+
 ## Architectural Decision Records (ADRs)
 Please refer to the listing of files within this repo (above) for all ADRs.
 
 <a name="actors"/>
+
 ## Actors and Actions
 * Registered Customer
   * view available meals by location
