@@ -3,6 +3,64 @@
 ## Architectural Decision Records (ADRs)
 Please refer to the listing of files within this repo (above) for all ADRs.
 
+## Actors and Actions
+* Registered Customer
+  * view available meals by location
+  * view order history
+  * identify diet/health preferences
+  * identify demographic characteristics
+  * provide feedback on a past meal
+  * purchase meal at a kiosk or smart fridge
+  * subscribe to a meal plan of delivered meals (future)
+  
+* Unregistered Customer
+  * purchase meal at a kiosk or smart fridge
+  * become a registered customer
+
+* Merchant (Farmacy Food)
+  * view feedback on a customer's past meal
+  * view aggregate feedback on meals
+  * view aggregate feedback on locations
+  * view aggregate feedback from a customer
+  * issue a customer survey
+  * set prices on meals
+  * set discounts on meals by menu item, by date/time
+  * set discounts on meals by demographic (future)
+  * provide coupons to customers by demographic
+  * view meal inventory by location(s)
+  * view aggregate meal transactions by location, by customer, by menu item
+  * schedule and request meal prep from the kitchen
+  * decide what meals to produce and where to distribute
+  
+* Kiosk Point-of-Sale (Toast)
+  * record transacted meal
+  * provide current kiosk inventory
+
+* Smart Fridge (Byte Tech)
+  * record transacted meal
+  * provide current fridge inventory
+
+* Kitchen
+  * prepare meals based on merchant order
+  * procure ingredients to prepare meals
+
+* Kitchen Inventory Management (Cheftec)
+  * manage meal recipes
+  * manage ingredient procurement/inventory
+  * track nutrition facts
+
+* Distributor
+  * pick up meals from kitchen(s) and deliver to kiosks, fridges and other venues
+  
+* Donor (future)
+  * donate funds
+  * identify beneficiaries
+  * review donation impact
+
+## Components and Responsibilities
+
+
+
 ## Questions
 * How should feedback be handled?
   * How does handling survey feedback differ from handling meal feedback?
