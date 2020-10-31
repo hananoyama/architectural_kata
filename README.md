@@ -81,14 +81,15 @@ Please refer to the listing of files within this repo (above) for all ADRs.
   * collect customer income and demographic details (low income, student)
 * feedback processor
   * collect customer feedback on ordered meals
-  * notify merchant, customer service, etc. of critical feedback
+  * inform merchant, customer service, etc. of critical feedback
 * survey feedback
   * push surveys to customers
   * collect customer survey responses
-* meal preparation schedule
+* meal preparation scheduling
   * send meal orders to the kitchen(s)
 * meal distribution
-  * notify distributors of prepped meal pickup
+  * inform distributor personnel of prepped meal pickup from kitchen(s)
+  * designate where meals need to be distributed (kiosk, fridge, etc. locations)
 * price setting
   * allow setting of discounted prices by menu item or location or other non-customer characteristic
   
