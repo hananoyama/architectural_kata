@@ -72,8 +72,26 @@ Please refer to the listing of files within this repo (above) for all ADRs.
 <a name="components"/>
 
 ## Components and Responsibilities
-* 
-
+* location inventory tracker
+  * track meal inventory at a location where meals are sold (kiosk, fridge, etc.)
+* customer order tracker
+  * track customer meal order history
+* customer demographics
+  * collect customer diet and health preferences
+  * collect customer income and demographic details (low income, student)
+* feedback processor
+  * collect customer feedback on ordered meals
+  * notify merchant, customer service, etc. of critical feedback
+* survey feedback
+  * push surveys to customers
+  * collect customer survey responses
+* meal preparation schedule
+  * send meal orders to the kitchen(s)
+* meal distribution
+  * notify distributors of prepped meal pickup
+* price setting
+  * allow setting of discounted prices by menu item or location or other non-customer characteristic
+  
 <a name="questions"/>
 
 ## Questions
