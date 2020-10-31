@@ -3,6 +3,22 @@
 ## Architectural Decision Records (ADRs)
 Please refer to the listing of files within this repo (above) for all ADRs.
 
+## Questions
+* How should feedback be handled?
+  * How does handling survey feedback differ from handling meal feedback?
+    * survey feedback is merchant-initiated and merchant reviews it at their own leisure (merchant pushes to customer)
+    * meal feedback is client-initiated (client pushes to merchant) and may be time-sensitive and require review
+
+* How do we handle inventory? Our solution/system is the global repository of meal inventory.
+  * How does our system obtain a current snapshot of inventory?
+    * Fridges and kiosks, etc. would not push inventory updates (or sales) to our system
+    * Need to periodically query fridge/kiosk APIs to get inventory levels and aggregate
+    
+* How does a kitchen know what meals to prepare?
+  * Merchant sets the menu and decides what is required in whcih locations.
+  * Kitchen just needs to know how many meals and handle procurement.
+  * Distribution is a separate function.
+
 ## Assumptions/Clarifications about the Domain
 ### How does a kiosk differ from a smart fridge?
 Kiosks and smart fridges are separate modes of distribution. The term "kiosk" is not a synonym for the venue where you might find a smart fridge:  a kiosk is NOT a place where a smart fridge would be placed.
