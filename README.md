@@ -1,5 +1,7 @@
 # architectural_kata
+
 [Architectural Decision Records](#adrs)
+
 [Actors and Actions](#actors)
 
 <a name="adrs"/>
