@@ -1,6 +1,9 @@
 # architectural_kata
 
-## Assumptions/Clarifications
+## Architectural Decision Records (ADRs)
+Please refer to the listing of files within this repo (above) for all ADRs.
+
+## Assumptions/Clarifications about the Domain
 ### How does a kiosk differ from a smart fridge?
 Kiosks and smart fridges are separate modes of distribution. The term "kiosk" is not a synonym for the venue where you might find a smart fridge:  a kiosk is NOT a place where a smart fridge would be placed.
 
