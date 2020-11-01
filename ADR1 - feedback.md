@@ -16,8 +16,8 @@ Feedback can be provided at their own initiative or in response to a request. It
 ## Decision
 Keep separate feedback processor components to handle customer-initiated vs merchant-solicited feedback.
 
-Our initial thought was to have a feedback processor component that handled all sorts of user feedback. However, customer-initiated feedback requires a more event-driven approach than merchant-solicited feedback. For the former, the mechant may have to triage and respond quickly to a quality issue. For the latter, the merchant can review responses at their own leisure. The workflows governing how both are connected and analyzed are different.
+Our initial thought was to have a feedback processor component that handled all sorts of user feedback. However, customer-initiated feedback requires a more event-driven approach than merchant-solicited feedback. For the former, the mechant may have to triage and respond quickly to a quality issue. For the latter, the merchant can review responses at their own leisure. The workflows governing how both are collected and analyzed are different.
 
 ## Consequences
-This decision will allow for customer-intiiated feedback to have a different set of metadata/messaging contract from merchant-solicited feedback.
+This decision will allow for customer-initiated feedback to have a different set of metadata/messaging contract from merchant-solicited feedback.
 One can follow an event-driven workflow and the other a request-driven workflow.
