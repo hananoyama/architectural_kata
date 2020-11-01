@@ -12,6 +12,6 @@ We are not confident we can automate this process just yet. Perhaps as more data
 To aid a merchant in the decision making, the system will integrate with POS and smart fridges to poll for the meal quantities at each location and to update the central repository.
 
 ## Consequences
-UI components for the merchant are needed to monitor meal quantities at locations and to schedule and monitor the deliveries. 
-A notification mechanism is needed to alert the distributors of a scheduled delivery.
-UI for te distributors is needed to confirm and resolve delivery status.
+* UI components for the merchant are needed to monitor meal quantities at locations and to schedule and monitor the deliveries. 
+* A notification mechanism is needed to alert the distributors of a scheduled delivery.
+* UI for the distributors is needed to confirm and resolve delivery status.
