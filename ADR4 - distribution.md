@@ -4,14 +4,15 @@
 Proposed
 
 ## Context
-Deliveries to re-stack the fridges and POSs have to be scheduled. It was tempting to have this scheduling driven by the inventory updates. However, by the time a fridge or a POS need to be re-stacked, it is too late to request meals to be cooked and delivered. This planning should be done in advance by the merchant.
+The merchant is responsible for deciding how many meals the kitchen(s) need to produce and for which locations based on past sales data. Perhaps as more data accumulates, a new component incorporating machine learning could be introduced that can suggest meal quantities, locations and delivery schedules.
+
+Deliveries to the fridges and kiosks (and anywhere else) also have to be coordinated with the distributor.
 
 ## Decision
-We are not confident we can automate this process just yet. Perhaps as more data is accumulated, a new component could be introduced that will pre-populate or suggest meal quantity and delivery schedules. As of now, the merchant will have the ultimate control over the meal prep and distribution scheduling. To achieve this, we are introducing a distribution component where the merchant will specify the distribution inventory and schedule. This component will communicate with the meal scheduler component. The latter will update the distribution scheduler once the meals are ready to be picked up.
-
-To aid a merchant in the decision making, the system will integrate with POS and smart fridges to poll for the meal quantities at each location and to update the central repository.
+To allow the merchant to coordinate meal production and distribution, we are introducing a meal preparation scheduling component where the merchant will specify the distribution inventory and schedule. This component will communicate with the meal distribution component. The former is responsible for tracking whether meal prep requests have been fulfilled. It will communicate fulfillment to the distribution component, which will notify distributors once meals are ready to be picked up.
 
 ## Consequences
-* UI components for the merchant are needed to monitor meal quantities at locations and to schedule and monitor the deliveries. 
-* A notification mechanism is needed to alert the distributors of a scheduled delivery.
-* UI for the distributors is needed to confirm and resolve delivery status.
+* A UI for the merchant is needed to monitor meal quantities at locations and to schedule and monitor the deliveries.
+* A notification mechanism is needed to alert the distributors of a scheduled delivery. Meal fulfillment should be event-driven where possible, i.e. once the kitchen has prepared the meals, it should send notification to meal preparation scheduling. If that push is not possible, then meal preparation scheduling needs to synchronously check for meal readiness at the date and time specified in the original request.
+* A UI for the distributors is needed to confirm and resolve delivery status and allow the system to update inventory.
+* To aid a merchant in the decision making, the merchant will be able to poll the kiosks, smart fridges and other locations for current meal quantities via the location inventory tracker.
