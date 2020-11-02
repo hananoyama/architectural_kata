@@ -1,4 +1,4 @@
-# 1. Handling Promotions
+# 3. Handling Promotions
 
 ## Status
 Proposed
