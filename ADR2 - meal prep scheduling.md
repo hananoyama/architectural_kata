@@ -1,4 +1,4 @@
-# 1. Scheduling Meal Prep
+# 2. Scheduling Meal Prep
 
 ## Status
 Proposed
