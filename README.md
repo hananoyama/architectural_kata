@@ -74,24 +74,33 @@ The initial architecture diagram is [here](https://github.com/hananoyama/archite
 ## Components and Responsibilities
 * location inventory tracker
   * track meal inventory at a location where meals are sold (kiosk, fridge, etc.)
+  * query vendor APIs to maintain inventory
+  * receive distributor restocking updates to maintain inventory
 * customer order tracker
   * track customer meal order history
 * customer demographics
   * collect customer diet and health preferences
   * collect customer income and demographic details (low income, student)
-* feedback processor
+* customer-initiated feedback processor
   * collect customer feedback on ordered meals
-  * inform merchant, customer service, etc. of critical feedback
-* survey feedback
+  * allow for triage so that merchant, customer service, etc. are notified of critical feedback
+* merchant-initiated feedback processor
   * push surveys to customers
   * collect customer survey responses
 * meal preparation scheduling
-  * send meal orders to the kitchen(s)
+  * allow merchant or admin to send meal orders to the kitchen(s)
+  * monitor order fulfillment status and notify inventory tracker of in-flight inventory
 * meal distribution
   * inform distributor personnel of prepped meal pickup from kitchen(s)
   * designate where meals need to be distributed (kiosk, fridge, etc. locations)
-* price setting
+  * provide updates to inventory tracker upon restocking of distribution points
+* pricing
+  * allow merchant to set prices on menu items
   * allow setting of discounted prices by menu item or location or other non-customer characteristic
+* UI or API components
+  * customer UI (web and app)
+  * kitchen UI (web or app) or API to interface with kitchen staff or kitchen inventory software
+  * merchant/admin UI (web)
   
 <a name="questions"/>
 
@@ -122,3 +131,6 @@ The initial architecture diagram is [here](https://github.com/hananoyama/archite
   * A smart fridge can track its own inventory levels and act as its own point-of-sale. The product packaging for a meal has an RFID tag that a receiver on the fridge can detect and the act of removing an item from the fridge/closing the door completes the transaction and records the data to the Byte Tech network.
 
   * The kiosk point-of-sale system (Toast) tracks sales and inventory levels, which are updated when the venue staff completes the sale.
+
+* What if there is insufficient ingredient inventory at a kitchen to prep a meal order?
+  * An SLA needs to be set up between the Farmacy Food merchant and any kitchen supplying meals.
