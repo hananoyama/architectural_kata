@@ -134,3 +134,12 @@ The initial architecture diagram is [here](https://github.com/hananoyama/archite
 
 * What if there is insufficient ingredient inventory at a kitchen to prep a meal order?
   * An SLA needs to be set up between the Farmacy Food merchant and any kitchen supplying meals.
+
+* Do distribution points allow for customers to see dynamic prices targeted at them based on their tier (low-income, student)?
+  * At a fridge, is there any way to self-identify to see tiered pricing? It seems unlikely, since swiping the payment card is meant to simultaneously identify the customer, allow them to open the fridge door, and authorize charges for any RFID-tagged items that they remove from the fridge.
+  * At a kiosk, prices for meals would likely be displayed as in a traditional shop (via stickers or signage?). There is no provision to display dynamic prices.
+  * Based on these assumptions, tiered pricing can only apply to subscriptions or web- or app-based ordering, which is future functionality.
+
+* What pricing/cost information lives within our solution?
+  * Prices set by the merchant for all the meals. It probably could be customized by location characteristics or be based on the meal's shelf life (i.e. discounting based on shelf life). These prices need to be pushed to the smart fridge or kiosk POS software via their APIs.
+  * Underlying costs for ingredients and whatever the kitchen might charge for meal prep falls within the domain of kitchen inventory (Cheftec) and bookkeeping (Quickbooks) software and does not need to be part of our solution. However, accounting may need to be able to check on meal fulfillment by consulting our system via the merchant/admin interface.
