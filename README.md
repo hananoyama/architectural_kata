@@ -11,7 +11,7 @@
 <a name="adrs"/>
 
 ## Architectural Decision Records (ADRs)
-Please refer to the listing of files within this repo (above) for all ADRs.
+The initial architecture diagram is [here](https://github.com/hananoyama/architectural_kata/blob/main/Farmacy%20Food%20architecture%20diagram.png). The diagram includes indicators for ADRs. It also follows the convention of solid connectors for synchronous and dashed connectors for asynchronous communication. Please refer to the listing of files within this repo (above) for all ADRs.
 
 <a name="actors"/>
 
