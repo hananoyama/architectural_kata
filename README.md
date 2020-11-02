@@ -69,6 +69,10 @@ The initial architecture diagram is [here](https://github.com/hananoyama/archite
   * identify beneficiaries
   * review donation impact
 
+* Accountant
+  * renconcile kitchen invoices with prepped meals
+  * manage payment to kitchen staff and distributors
+  
 <a name="components"/>
 
 ## Components and Responsibilities
