@@ -1,4 +1,4 @@
-# 1. Handling Meal Distribution
+# 4. Handling Meal Distribution
 
 ## Status
 Proposed
