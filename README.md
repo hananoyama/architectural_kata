@@ -136,6 +136,9 @@ The initial architecture diagram is [here](https://github.com/hananoyama/archite
 <a name="questions"/>
 
 ## Questions
+
+These were some of the questions we posed to ourselves. The answers were derived from a combination of reading the presentation transcript and assumptions based on what we could learn about the smart fridges and point of sale software.
+
 * How should feedback be handled?
   * How does handling survey feedback differ from handling meal feedback?
     * survey feedback is merchant-initiated and merchant reviews it at their own leisure (merchant pushes to customer)
