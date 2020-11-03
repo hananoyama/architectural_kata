@@ -21,4 +21,4 @@ This decision will require a separate UI for kitchen staff to interface with our
 
 As the meal prep scheduling component also tracks fulfillment, it may also have to communicate that fulfillment to the accounting system (Quickbooks) to support reconciliation with invoices from the kitchen for completed orders. That communication may not be automated, depending on the Quickbooks API.
 
-A decision to build a UI and API for this component allows for the possibility of integrating with other kitchen inventory software.
+A decision to build a UI as well as an API for this component supports extensibility by allowing for the possibility of integrating with other kitchen inventory software or with meal providers that do not use fully digitized systems for controlling their operations.
