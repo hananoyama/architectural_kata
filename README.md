@@ -1,5 +1,7 @@
 # architectural_kata
 
+[Introduction](#intro)
+
 [Architectural Decision Records](#adrs)
 
 [Actors and Actions](#actors)
@@ -7,6 +9,31 @@
 [Components and Responsibilities](#components)
 
 [Questions](#questions)
+
+[Links](#links)
+
+<a name="intro"/>
+
+## Introduction
+We are proposing a system whose primary responsibilities are to
+* track meal inventory 
+* allow for management of meal prep orders and distribution
+* track customer order history
+* track and respond to customer feedback
+* track customer demographic details
+* manage promotions and dynamic pricing
+
+We consider the following out of scope (or future work)
+* pre-ordering meals via website or app
+* meal subscription plans
+* tiered pricing based on customer demographics
+* storing of sensitive health data that has to abide by HIPAA
+
+We assume
+* costs and invoices (for kitchens, distributors, fridge and kiosk rentals) are managed externally via Quickbooks
+* sales figures from customer transactions are communicated to Quickbooks and any external BI systems for reporting
+* meal ids from customer transactions are reported to our solution (to the customer order history component) so they can be aligned with meal-specific feedback
+* any pricing data housed within our solution exists only so we can push prices dynamically to the smart fridge and kiosk POS software
 
 <a name="adrs"/>
 
@@ -147,3 +174,16 @@ The initial architecture diagram is [here](https://github.com/hananoyama/archite
 * What pricing/cost information lives within our solution?
   * Prices set by the merchant for all the meals. It probably could be customized by location characteristics or be based on the meal's shelf life (i.e. discounting based on shelf life). These prices need to be pushed to the smart fridge or kiosk POS software via their APIs.
   * Underlying costs for ingredients and whatever the kitchen might charge for meal prep falls within the domain of kitchen inventory (Cheftec) and bookkeeping (Quickbooks) software and does not need to be part of our solution. However, accounting may need to be able to check on meal fulfillment by consulting our system via the merchant/admin interface.
+
+<a name="links"/>
+
+## Links
+Smart Fridge:
+https://bytetechnology.co/
+https://thespoon.tech/byte-foods-opens-up-its-smart-vending-platform-with-byte-technology/
+
+Kiosk Point of Sale Software:
+https://pos.toasttab.com/
+
+Cheftec Kitchen Inventory Management Software:
+https://www.cheftec.com/cheftec-basic
