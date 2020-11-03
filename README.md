@@ -40,12 +40,13 @@ We assume
 ## Architectural Decision Records (ADRs)
 * The initial architecture diagram is [here](https://github.com/hananoyama/architectural_kata/blob/main/Farmacy%20Food%20architecture%20diagram.png). The diagram includes indicators for ADRs. It also follows the convention of solid connectors for synchronous and dashed connectors for asynchronous communication. 
 
-* These are the ADRs: Please refer to the listing of files within this repo (above) for all ADRs.
+* These are the ADRs:
   * [ADR1 - processing feedback.md](https://github.com/hananoyama/architectural_kata/blob/main/ADR1%20-%20processing%20feedback.md)
-ADR2 - meal prep scheduling.md
-ADR3 - handling promotions.md
-ADR4 - handling distribution.md
-ADR5 - inventory tracking.md
+  * [ADR2 - meal prep scheduling.md](https://github.com/hananoyama/architectural_kata/blob/main/ADR2%20-%20meal%20prep%20scheduling.md)
+  * [ADR3 - handling promotions.md](https://github.com/hananoyama/architectural_kata/blob/main/ADR3%20-%20handling%20promotions.md)
+  * [ADR4 - handling distribution.md](https://github.com/hananoyama/architectural_kata/blob/main/ADR4%20-%20handling%20distribution.md)
+  * [ADR5 - inventory tracking.md](https://github.com/hananoyama/architectural_kata/blob/main/ADR5%20-%20inventory%20tracking.md)
+
 
 <a name="actors"/>
 
