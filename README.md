@@ -51,6 +51,8 @@ We assume
 <a name="actors"/>
 
 ## Actors and Actions
+We initially tried to identify actors and actions based on the requirements and presentation transcript, captured in [this diagram](https://github.com/hananoyama/architectural_kata/blob/main/Farmacy%20Food%20actors%20and%20actions%20(initial%20draft).png).
+
 * Registered Customer
   * view available meals by location
   * view order history
@@ -111,6 +113,7 @@ We assume
 <a name="components"/>
 
 ## Components and Responsibilities
+Based on the actors and actions we identified, we derived a minimal set of components.
 * location inventory tracker
   * track meal inventory at a location where meals are sold (kiosk, fridge, etc.)
   * query vendor APIs to maintain inventory
